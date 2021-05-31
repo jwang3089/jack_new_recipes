@@ -1,0 +1,11 @@
+# We have a conf and classes directory, add to BBPATH 
+BBPATH := "${BBPATH}:${LAYERDIR}" 
+# We have a packages directory, add to BBFILES 
+BBFILES := "${BBFILES} ${LAYERDIR}/recipes-*/*/*.bb \
+           ${LAYERDIR}/recipes-*/*/*.bbappend"
+#BBFILES += "${LAYERDIR} \ 
+# name of the RECIPE jack1.bb
+BBFILE_COLLECTIONS += "jack2"
+BBFILE_PATTERN_jack2:= "^${LAYERDIR}/"
+BBFILE_PRIORITY_jack2:= "5"
+

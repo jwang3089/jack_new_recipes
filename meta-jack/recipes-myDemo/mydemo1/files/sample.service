@@ -1,0 +1,9 @@
+[Unit]
+Description=GNU Hello World Startup script
+
+[Service]
+ExecStart=/home/root/hello-world
+Before=hello.service
+
+[Install]
+WantedBy=default.target
